@@ -68,19 +68,19 @@ body{
 /* Game board */
 
 .container{
-    margin: 0 auto;
+    margin: 3% 30%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    width: 43%;
+    max-width: 40%;
 }
 
 .cell{
-    width: 200px;
+    width: 100%;
     height: 200px;
-    border: 2.5px solid #000000;
+    border: 3px solid #000000;
     cursor: pointer;
-    line-height: 100px;
+    background-color: #00000010;
 }
 
 .cell:hover{
@@ -114,4 +114,27 @@ body{
 .cell:nth-child(7),
 .cell:nth-child(8) {
     border-bottom: none;
+}
+
+/* Scores */
+
+.player-score,
+.computer-score{
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+}
+
+.player-score{
+    float: left;
+    left: 5%;
+}
+
+.computer-score{
+    float: right;
+    right: 5%;
+}
+
+.big {
+    font-size: 400%;
 }
