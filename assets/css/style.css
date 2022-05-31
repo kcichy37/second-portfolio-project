@@ -64,3 +64,54 @@ body{
     background-color: #ffffff49;
     margin-left: 12%;
 }
+
+/* Game board */
+
+.container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    width: 43%;
+}
+
+.cell{
+    width: 200px;
+    height: 200px;
+    border: 2.5px solid #000000;
+    cursor: pointer;
+    line-height: 100px;
+}
+
+.cell:hover{
+    background-color: #f7cb076c;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    border: 0px;
+    box-shadow: 2.5px 2.5px 2.5px;
+}
+
+/* Code implemented from Web Dev Simplified on Youtube.
+    Code gets rid of the side borders on the game board */
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1){
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3){
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
+}
