@@ -138,3 +138,19 @@ body{
 .big {
     font-size: 400%;
 }
+
+/* Game Rules/Footer */
+
+footer{
+    text-align: center;
+    font-size: 120%;
+}
+
+footer h2{
+    text-decoration: 2px underline;
+    margin: 0;
+}
+
+footer p{
+    margin: 0;
+}

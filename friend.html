@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' type='image/x-icon' href='./assets/images/favicon-32x32.png'/> 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>TicTacToe</title>
 </head>
@@ -14,7 +14,7 @@
     <header>
         <h1 class="heading">TicTacToe</h1>
         <nav class="menu">
-            <li><a href="./index.html">Easy Mode</a></li>
+            <li ><a href="./index.html">Easy Mode</a></li>
             <li><a href="./hard.html">Hard Mode</a></li>
             <li class="active"><a href="./friend.html">Friend Mode</a></li>
         </nav>
@@ -22,7 +22,10 @@
 
     <section>
         <div class="player-score">
-            <p>Player 1 Score:<span>0</span></p>
+            <p>Player 1 Score:<br><span class="big">0</span></p>
+        </div>
+        <div class="computer-score">
+            <p>Player 2 Score:<br><span class="big">0</span></p>
         </div>
     
         <div class="container">
@@ -37,15 +40,17 @@
             <div class="cell"></div> 
         </div>
 
-        <div class="computer-score">
-            <p>Player 2 Score:<span>0</span></p>
-        </div>
+       
     </section>
-
     </div>
 
     <Footer>
-        Game Rules
+        <h2>Game Rules</h2>
+        <p>It is really simple<br> 
+        You are X,  the computer (or your friend) is O.<br> 
+        Players take turns putting their marks in empty squares.<br>
+        The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.<br>
+        When all 9 squares are full, the game is over.</p>
     </Footer>
 
 
