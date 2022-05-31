@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body{
+    font-family: sriracha, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    background: url("../images/background.webp");
+    
+}
+
+/* Heading and nav */
+
+.heading{
+    color: #f7cb07;
+    text-align: center;
+    font-size: 550%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    text-shadow: 5px 5px #000000;
+    -webkit-text-stroke: 1px #000000;
+}
+
+.menu{
+    text-align: center;
+}
+
+.menu li{
+    list-style-type: none;
+    display: inline-block;
+    width: 14%;
+    background-color: #12c7e7;
+    border-radius: 50px;
+    border: 2px solid #000000;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 130%;
+}
+
+.menu a:hover{
+    background-color: #f7cb07;
+    color: #000000;
+    width: 14%;
+    display: inline-block;
+    width: 100%;
+    border-radius: 50px;
+    transition: background-color ease-in-out 0.4s;
+}
+
+.active{
+    text-decoration: 1.7px underline;
+    color: #000000;
+    background-color: #f7cb07 !important;
+    border: 1px solid #000000;
+}
+
+
+.box{
+    width: 75%;
+    height: 300%;
+    border: 2.5px solid #000000;
+    background-color: #ffffff49;
+    margin-left: 12%;
+}
