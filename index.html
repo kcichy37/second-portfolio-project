@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="box">
+
     <header>
         <h1 class="heading">TicTacToe</h1>
         <nav class="menu">
@@ -20,14 +20,16 @@
         </nav>
     </header>
 
-    <section>
-        <div class="player-score">
-            <p>Player Score:<br><span class="big">0</span></p>
-        </div>
-        <div class="computer-score">
-            <p>Computer Score:<br><span class="big">0</span></p>
-        </div>
-    
+    <section id="game--rules">
+        <h2>Game Rules</h2>
+        <p>It is really simple<br> 
+        You are X,  the computer (or your friend) is O.<br> 
+        Players take turns putting their marks in empty squares.<br>
+        The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.<br>
+        When all 9 squares are full, the game is over.</p>
+    </section>
+
+    <section id="game-board"></section>
         <div class="container">
             <div class="cell"></div>
             <div class="cell"></div> 
@@ -39,20 +41,16 @@
             <div class="cell"></div> 
             <div class="cell"></div> 
         </div>
-
-       
     </section>
-    </div>
 
-    <Footer>
-        <h2>Game Rules</h2>
-        <p>It is really simple<br> 
-        You are X,  the computer (or your friend) is O.<br> 
-        Players take turns putting their marks in empty squares.<br>
-        The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.<br>
-        When all 9 squares are full, the game is over.</p>
-    </Footer>
-
+    <section id="game--score">
+        <div class="player-score">
+            <p>Player Score:<br><span class="big">0</span></p>
+        </div>
+        <div class="computer-score">
+            <p>Computer Score:<br><span class="big">0</span></p>
+        </div>
+    </section>
 
     <script src="./assets/js/script.js"></script>
 </body>
