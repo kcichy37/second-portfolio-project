@@ -48,7 +48,7 @@ body{
 }
 
 .rules p{
-    font-size: 150%;
+    font-size: 200%;
     margin-top: 0;
 }
 
@@ -64,7 +64,6 @@ button{
     font-size: 100%;
     margin-bottom: 0.5%;
 }
-
 
 /* Game board */
 
@@ -142,7 +141,10 @@ button{
 
 /* Game Board and Game Scores display settings to none for js */
 
-.container, #game--score{
+#game--score{
     display: none;
 }
 
+#game--board{
+    display: none;
+}
