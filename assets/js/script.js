@@ -1,3 +1,11 @@
+/** This function allows there to be different sections at different times.
+ * First section is the "Game Rules", we can proceed futher by clicking the play button
+ * this will hide the rules and show the "Game Board" section.
+ * Next section which is the "Game Score" will show only once the game is completed,
+ * and will be triggered by a Win, Loss, or Tie.
+ */
+
+/* Game rules to Game board*/
 function gameChange(){
     const rulesChange = document.getElementById('game--rules');
         if (rulesChange.style.display === 'none') {
@@ -13,7 +21,7 @@ function gameChange(){
 }
 
 
-
+/* Game board functionality */
 let cells = Array.from(document.getElementsByClassName('cell'));
 const O = 'O';
 const X = 'X';
@@ -33,9 +41,7 @@ const pop = document.getElementById("audio");
 
 function playAudio() { 
   pop.play(); 
-  pop.addEventListener('click', {once:true})
 } 
 
 
 
-startGame()
