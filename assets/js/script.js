@@ -29,4 +29,13 @@ function cellClicked(e){
     currentPlayer = currentPlayer == X ? O : X; 
 }
 
+const pop = document.getElementById("audio"); 
+
+function playAudio() { 
+  pop.play(); 
+  pop.addEventListener('click', {once:true})
+} 
+
+
+
 startGame()
