@@ -43,6 +43,11 @@ function cellClicked(e){
             let winning = playerWon();
             console.log(winning);
             cells.forEach(cell => cell.removeEventListener('click', cellClicked))
+            
+
+            setTimeout(() => {document.getElementById('game--board').style.display = 'none';
+            document.getElementById('game--score').style.display = "block"; }, 1000);
+            
         } 
         currentPlayer = currentPlayer == X ? O : X;
     }
@@ -70,7 +75,6 @@ function playerWon(){
         if(cellsIndex[a] && (cellsIndex[a] == cellsIndex[b] && cellsIndex[a] == cellsIndex[c])) {
         return [a, b, c];
         }
-        break
     }   
     return false;
 }
