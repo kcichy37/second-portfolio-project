@@ -25,7 +25,8 @@ function gameChange(){
 let cells = Array.from(document.getElementsByClassName('cell'));
 const O = 'O';
 const X = 'X';
-let currentPlayer = X
+let currentPlayer = X;
+let cellsIndex = Array(9).fill(null);
 
 const startGame = () => {
     cells.forEach(cell => cell.addEventListener('click', cellClicked, { once: true}));
@@ -34,14 +35,29 @@ const startGame = () => {
 function cellClicked(e){
     e.target.innerText = currentPlayer;
 
-    currentPlayer = currentPlayer == X ? O : X; 
+    currentPlayer = currentPlayer == X ? O : X;
+    
+
+    const pop = document.getElementById("audio"); 
+    pop.play(); 
+
 }
 
-const pop = document.getElementById("audio"); 
+const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [0, 4, 8],
+]
 
-function playAudio() { 
-  pop.play(); 
-} 
+
+startGame()
+
+
 
 
 
