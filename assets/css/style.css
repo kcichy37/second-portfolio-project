@@ -123,6 +123,10 @@ button:hover{
     margin-top: 2%;
 }
 
+.winning--color{
+    color:#3cb2ed;
+}
+
 /* Code implemented from Web Dev Simplified on Youtube.
 Code gets rid of the side borders on the game board */
 

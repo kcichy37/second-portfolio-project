@@ -42,8 +42,8 @@ function cellClicked(e){
         if(playerWon() !==false){
             let winning = playerWon();
             console.log(winning);
-        }
-
+            cells.forEach(cell => cell.removeEventListener('click', cellClicked))
+        } 
         currentPlayer = currentPlayer == X ? O : X;
     }
     
@@ -70,12 +70,13 @@ function playerWon(){
         if(cellsIndex[a] && (cellsIndex[a] == cellsIndex[b] && cellsIndex[a] == cellsIndex[c])) {
         return [a, b, c];
         }
+        break
     }   
     return false;
 }
 
-
 startGame();
+
 
 
 
