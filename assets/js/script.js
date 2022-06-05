@@ -33,11 +33,20 @@ const startGame = () => {
 }
 
 function cellClicked(e){
-    e.target.innerText = currentPlayer;
+    const id = e.target.id
 
-    currentPlayer = currentPlayer == X ? O : X;
+    if(!cellsIndex[id]){
+        cellsIndex[id] = currentPlayer
+        e.target.innerText = currentPlayer;
+
+        if(playerWon() !==false){
+            let winning = playerWon();
+            console.log(winning);
+        }
+
+        currentPlayer = currentPlayer == X ? O : X;
+    }
     
-
     const pop = document.getElementById("audio"); 
     pop.play(); 
 
@@ -51,11 +60,22 @@ const winningConditions = [
     [1, 4, 7],
     [2, 5, 8],
     [2, 4, 6],
-    [0, 4, 8],
+    [0, 4, 8]
 ]
 
+function playerWon(){
+    for(const condition of winningConditions){
+        let [a, b, c] = condition;
 
-startGame()
+        if(cellsIndex[a] && (cellsIndex[a] == cellsIndex[b] && cellsIndex[a] == cellsIndex[c])) {
+        return [a, b, c];
+        }
+    }   
+    return false;
+}
+
+
+startGame();
 
 
 
