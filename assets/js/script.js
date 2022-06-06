@@ -28,6 +28,8 @@ const X = 'X';
 let currentPlayer = X;
 let cellsIndex = Array(9).fill(null);
 
+let winnercolor = getComputedStyle(document.body).getPropertyValue('--winningcolor')
+
 const startGame = () => {
     cells.forEach(cell => cell.addEventListener('click', cellClicked, { once: true}));
 }
@@ -43,15 +45,24 @@ function cellClicked(e){
             let winning = playerWon();
             console.log(winning);
             cells.forEach(cell => cell.removeEventListener('click', cellClicked))
-            
+
+            winning.map(cell => cells[cell].style.color=winnercolor)
 
             setTimeout(() => {document.getElementById('game--board').style.display = 'none';
-            document.getElementById('game--score').style.display = "block"; }, 1000);
+            document.getElementById('game--score').style.display = "block"; }, 2500);
+
+            document.getElementById('whowon').innerText = `${currentPlayer} Has Won!`
+
+            if(currentPlayer == X){
+                xMarkScore()
+            }else{
+                oMarkScore()
+            }
             
         } 
         currentPlayer = currentPlayer == X ? O : X;
     }
-    
+
     const pop = document.getElementById("audio"); 
     pop.play(); 
 
@@ -78,6 +89,17 @@ function playerWon(){
     }   
     return false;
 }
+
+function xMarkScore(){
+    let xscore = parseInt(document.getElementById("x--score").innerText);
+    document.getElementById("x--score").innerText = ++xscore;
+}
+
+function oMarkScore(){
+    let oscore =parseInt(document.getElementById("o--score").innerText);
+    document.getElementById("o--score").innerText = ++oscore;
+}
+
 
 startGame();
 
