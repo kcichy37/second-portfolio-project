@@ -51,7 +51,7 @@ function cellClicked(e){
             setTimeout(() => {document.getElementById('game--board').style.display = 'none';
             document.getElementById('game--score').style.display = "block"; }, 2500);
 
-            document.getElementById('whowon').innerText = `${currentPlayer} Has Won!`
+            document.getElementById('whowon').innerText = `Player ${currentPlayer} Has Won!`
 
             if(currentPlayer == X){
                 xMarkScore()

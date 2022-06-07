@@ -207,6 +207,12 @@ img{
     margin-top: 5%;
 }
 
+.score--buttons{
+    position: relative;
+    top: 35%;
+    font-size: 125%;
+}
+
 /* Game Board and Game Scores display settings to none for js */
 
 #game--score{
