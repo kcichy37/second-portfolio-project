@@ -43,7 +43,6 @@ function cellClicked(e){
 
         if(playerWon() !==false){
             let winning = playerWon();
-            console.log(winning);
             cells.forEach(cell => cell.removeEventListener('click', cellClicked))
 
             winning.map(cell => cells[cell].style.color=winnercolor)
@@ -98,6 +97,19 @@ function xMarkScore(){
 function oMarkScore(){
     let oscore =parseInt(document.getElementById("o--score").innerText);
     document.getElementById("o--score").innerText = ++oscore;
+}
+
+function gameRestart(){
+    const gameBoardSection = document.getElementById('game--board');
+    const gameScore = document.getElementById('game--score');
+
+    if(gameBoardSection.style.display === 'none'){
+        gameBoardSection.style.display = 'block';
+        gameScore.style.display = 'none';
+    }
+
+cellsIndex = Array(9).fill(null);
+cellsIndex.removeInnerText
 }
 
 
