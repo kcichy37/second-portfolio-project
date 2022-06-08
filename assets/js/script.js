@@ -27,9 +27,10 @@ const O = 'O';
 const X = 'X';
 let currentPlayer = X;
 let cellsIndex = Array(9).fill(null);
-let turn 
+let turn = currentPlayer;
 
 let winnercolor = getComputedStyle(document.body).getPropertyValue('--winningcolor')
+let resetcolor = getComputedStyle(document.body).getPropertyValue('--resetcolor')
 
 const startGame = () => {
     cells.forEach(cell => cell.addEventListener('click', cellClicked, { once: true}));
@@ -59,25 +60,23 @@ function cellClicked(e){
                 oMarkScore()
             }
         } 
-            
+          
+        let left = document.getElementById('left');
+        let right = document.getElementById('right');
         currentPlayer = currentPlayer == X ? O : X;
-        h2.addEventListener('change', changeTurn())
+        
+        if(currentPlayer == O){
+            right.style.color = '#d69a2d'
+            left.style.color = '#fcd03e'
+        } else if (currentPlayer == X){
+            left.style.color = '#d69a2d'
+            right.style.color = '#fcd03e'
+        }
     }
     
     const pop = document.getElementById("audio"); 
     pop.play(); 
 
-}
-
-function changeTurn(){
-    const left = getElementById('left');
-    const right = getElementById('right');
-
-    if(currentPlayer == X){
-        left.style.color = '#3cb2ed';
-    }else if(currentPlayer == O){
-        right.style.color = '#3cb2ed';
-    }
 }
 
 const winningConditions = [
@@ -97,13 +96,8 @@ function playerWon(){
 
         if(cellsIndex[a] && (cellsIndex[a] == cellsIndex[b] && cellsIndex[a] == cellsIndex[c])) {
         return [a, b, c];
-        } else {
-            const draw = cellsIndex.every((cell) => cell !== null);
-            if (draw) {
-            document.getElementById('whowon').innerText = `It's a Tie!`;
-        }
-    } 
-}  
+        } 
+    }  
     return false;
 }
 
@@ -121,7 +115,11 @@ function gameRestart(){
     const gameBoardSection = document.getElementById('game--board');
     const gameScore = document.getElementById('game--score'); 
     clearBoard()
+
+    let colorReset = clearBoard()
+    colorReset.map(cell => cells[cell].style.color=resetcolor);
     
+   
     function clearBoard() {
         document.getElementById("0").innerHTML = ''
         document.getElementById("1").innerHTML = ''
@@ -132,18 +130,14 @@ function gameRestart(){
         document.getElementById("6").innerHTML = ''
         document.getElementById("7").innerHTML = ''
         document.getElementById("8").innerHTML = ''
-
-
     }
 
         cellsIndex = Array(9).fill(null);
-        cells.forEach(cell => cell.addEventListener('click', cellClicked, { once: true}));
-    
+        cells.forEach(cell => cell.addEventListener('click', cellClicked, {once: true}));
 
-    if(gameBoardSection.style.display === 'none'){
+    if( gameBoardSection.style.display === 'none'){
         gameBoardSection.style.display = 'block';
         gameScore.style.display = 'none';
-
     }
 
 }

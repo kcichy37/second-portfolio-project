@@ -93,6 +93,7 @@ button:hover{
     float: left;
     margin-left: 12%;
     margin-top: 16%;
+    color: #d69a2d;
 }
 
 #right{
@@ -125,6 +126,7 @@ button:hover{
 
 :root{
     --winningcolor:#3cb2ed;
+    --resetcolor:#fcd03e;
 }
 
 /* Code implemented from Web Dev Simplified on Youtube.
