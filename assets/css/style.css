@@ -10,7 +10,6 @@ body{
 }
 
 /* Heading */
-
 .heading{
     color: #fcd03e;
     text-align: center;
@@ -24,6 +23,7 @@ body{
 
 /* Game Rules */
 
+/* Section box background */
 #game--rules{
     text-align: center;
     background-color: #ffffff80;
@@ -54,6 +54,7 @@ body{
 
 /* Buttons */
 
+/* Style for all buttons */
 button{
     font-weight: bold;
     background-color: #3cb2ed;
@@ -71,6 +72,7 @@ button:hover{
 
 /* Game board */
 
+/* Section box background */
 #game--board{
     text-align: center;
     background-color: #ffffff80;
@@ -154,6 +156,7 @@ Code gets rid of the side borders on the game board */
 
 /* Scores */
 
+/* Section box background */
 #game--score{
     text-align: center;
     background-color: #ffffffbe;
@@ -188,6 +191,7 @@ Code gets rid of the side borders on the game board */
     font-size: 400%;
 }
 
+/* Style for player score declaration */
 .playerwin{
     position: absolute;
     top: 45%;
@@ -207,6 +211,8 @@ i{
 
 img{
     margin-top: 5%;
+    width: 40%;
+    height: 40%;
 }
 
 .score--buttons{
@@ -217,6 +223,7 @@ img{
 
 /* Thank you */
 
+/* Section box background */
 #thankyou{
     text-align: center;
     background-color: #ffffff80;
@@ -230,7 +237,7 @@ img{
     padding-left: 3%;
 }
 
-/* Game Board and Game Scores display settings to none for js */
+/* Game Board and Game Scores display settings to none for js functionality */
 
 #game--score{
     display: none;
