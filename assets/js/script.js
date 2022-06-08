@@ -27,6 +27,7 @@ const O = 'O';
 const X = 'X';
 let currentPlayer = X;
 let cellsIndex = Array(9).fill(null);
+let turn 
 
 let winnercolor = getComputedStyle(document.body).getPropertyValue('--winningcolor')
 
@@ -57,14 +58,26 @@ function cellClicked(e){
             }else{
                 oMarkScore()
             }
-            
         } 
+            
         currentPlayer = currentPlayer == X ? O : X;
+        h2.addEventListener('change', changeTurn())
     }
-
+    
     const pop = document.getElementById("audio"); 
     pop.play(); 
 
+}
+
+function changeTurn(){
+    const left = getElementById('left');
+    const right = getElementById('right');
+
+    if(currentPlayer == X){
+        left.style.color = '#3cb2ed';
+    }else if(currentPlayer == O){
+        right.style.color = '#3cb2ed';
+    }
 }
 
 const winningConditions = [
@@ -84,8 +97,13 @@ function playerWon(){
 
         if(cellsIndex[a] && (cellsIndex[a] == cellsIndex[b] && cellsIndex[a] == cellsIndex[c])) {
         return [a, b, c];
+        } else {
+            const draw = cellsIndex.every((cell) => cell !== null);
+            if (draw) {
+            document.getElementById('whowon').innerText = `It's a Tie!`;
         }
-    }   
+    } 
+}  
     return false;
 }
 
@@ -101,17 +119,34 @@ function oMarkScore(){
 
 function gameRestart(){
     const gameBoardSection = document.getElementById('game--board');
-    const gameScore = document.getElementById('game--score');
+    const gameScore = document.getElementById('game--score'); 
+    clearBoard()
+    
+    function clearBoard() {
+        document.getElementById("0").innerHTML = ''
+        document.getElementById("1").innerHTML = ''
+        document.getElementById("2").innerHTML = ''
+        document.getElementById("3").innerHTML = ''
+        document.getElementById("4").innerHTML = ''
+        document.getElementById("5").innerHTML = ''
+        document.getElementById("6").innerHTML = ''
+        document.getElementById("7").innerHTML = ''
+        document.getElementById("8").innerHTML = ''
+
+
+    }
+
+        cellsIndex = Array(9).fill(null);
+        cells.forEach(cell => cell.addEventListener('click', cellClicked, { once: true}));
+    
 
     if(gameBoardSection.style.display === 'none'){
         gameBoardSection.style.display = 'block';
         gameScore.style.display = 'none';
+
     }
 
-cellsIndex = Array(9).fill(null);
-cellsIndex.removeInnerText
 }
-
 
 startGame();
 
