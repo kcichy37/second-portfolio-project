@@ -66,10 +66,10 @@ function cellClicked(e){
         currentPlayer = currentPlayer == X ? O : X;
         
         if(currentPlayer == O){
-            right.style.color = '#d69a2d'
+            right.style.color = '#ffffff'
             left.style.color = '#fcd03e'
         } else if (currentPlayer == X){
-            left.style.color = '#d69a2d'
+            left.style.color = '#ffffff'
             right.style.color = '#fcd03e'
         }
     }
@@ -116,11 +116,7 @@ function gameRestart(){
     const gameScore = document.getElementById('game--score'); 
     clearBoard()
 
-    let colorReset = clearBoard()
-    colorReset.map(cell => cells[cell].style.color=resetcolor);
-    
-   
-    function clearBoard() {
+    function clearBoard(e) {
         document.getElementById("0").innerHTML = ''
         document.getElementById("1").innerHTML = ''
         document.getElementById("2").innerHTML = ''
@@ -130,6 +126,16 @@ function gameRestart(){
         document.getElementById("6").innerHTML = ''
         document.getElementById("7").innerHTML = ''
         document.getElementById("8").innerHTML = ''
+
+        document.getElementById("0").style.color = '#fcd03e'
+        document.getElementById("1").style.color = '#fcd03e'
+        document.getElementById("2").style.color = '#fcd03e'
+        document.getElementById("3").style.color = '#fcd03e'
+        document.getElementById("4").style.color = '#fcd03e'
+        document.getElementById("5").style.color = '#fcd03e'
+        document.getElementById("6").style.color = '#fcd03e'
+        document.getElementById("7").style.color = '#fcd03e'
+        document.getElementById("8").style.color = '#fcd03e'
     }
 
         cellsIndex = Array(9).fill(null);
