@@ -4,6 +4,21 @@ The purpose of this project is to showcase the functionality of JavaScript in a 
 
 As TicTacToe is a simple and easy game, the purpose of it needs to be that it is simple in use and navigation for users to play the game.
 
+## User Stories
+1. Game rules
+- As a user I want to know how to play the game with my friend.
+- As a user I want to know what to expect from the game and the output I will get.
+
+2. The game
+- As a user I want to clearly see the board at all time.
+- AS a user I want to be able to choose my next move
+- As a user I want to clearly see who's turn it is.
+- As a user I want to clearly see who's won and how. 
+
+3. Score
+- As a user I want to be able to see the score after each round that been played
+- As a user I want to have the choice between playing again or qutting.
+
 ## Features
 The game has 4 sections:
 - Section with Game rules
@@ -50,17 +65,50 @@ Each section contains the games title 'TicTacToe' which is a yellow 'Sriracha' f
 - At the bottom the the scoreboard theres two buttons one to reset the game and start a new round and one to quit the game which will take you to a thank you section.
 ![Thank You](./assets/doc/thankyou.PNG "Thank You")
 
-## User Stories
-1. Game rules
-- As a user I want to know how to play the game with my friend.
-- As a user I want to know what to expect from the game and the output I will get.
+## Future Feature
+- The future features I would like to add to the game are: 
+    - Games against a computer with two difficulty levels, easy and hard. Easy will be the computer placing X/O randomly on the grid, and hard will be an actual 
+    AI trying to win against you. 
+    - Multiplayer games against other people, could be played across all platforms with internet access.
 
-2. The game
-- As a user I want to clearly see the board at all time.
-- AS a user I want to be able to choose my next move
-- As a user I want to clearly see who's turn it is.
-- As a user I want to clearly see who's won and how. 
+### Wireframes/Planning
 
-3. Score
-- As a user I want to be able to see the score after each round that been played
-- As a user I want to have the choice between playing again or qutting.
+## Testing
+### Code Validation 
+- The HTML code has been validated in the W3C Markup Validation Service and all HTML files have come back with no errors.
+- CSS Code has been validated in the W3C CSS Validation Service and all CSS code has come back with no errors (CSS level 3 + SVG)
+- I have also used the lighthouse app on the page I have created to test for accessibility:
+![Lighthouse Result](./assets/doc/thankyou.PNG "Lighthouse result")
+- JSHint
+
+
+### Page testing
+- Game rules play button turns to game board
+- Gameboard responsive to cursor
+- X/O placing after users' click
+- Sound when X/O is placed
+- Win/Tie recognition
+- Highlight the win
+- After Win/Tie does it take to scoreboard
+- Score updates after each Win
+- Play again and quit buttons – play again goes back to the game and quit takes you to thank you. 
+
+## Fixed bugs
+- Audio 
+- Winner colour not resetting
+
+## Unfixed bugs
+- N/A
+
+## Supported screens and Browsers
+- 
+
+## Deployment 
+### Github
+- Site was deployed to GitHub pages. The steps for deployment are as follows:
+    - In the GitHub repository, navigate to the Setting Tab, then to the 'Pages' tab on the left
+    - In the 'pages' tab find Source, press the dropdown menu and select 'Main' and save
+    - Once saved, the page will provide a link to the completed website.
+
+### Gitpod
+- 
