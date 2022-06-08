@@ -156,5 +156,16 @@ function gameRestart(){
 
 }
 
+function quitButton(){
+    const thankYou = document.getElementById('thankyou');
+    const gameScore = document.getElementById('game--score'); 
+
+
+    if(gameScore.style.display === 'block'){
+        gameScore.style.display = 'none';
+        thankYou.style.display = 'block';
+    }
+}
+
 startGame();
 
