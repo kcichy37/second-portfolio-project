@@ -75,26 +75,53 @@ Each section contains the games title 'TicTacToe' which is a yellow 'Sriracha' f
 
 ## Testing
 ### Code Validation 
-- The HTML code has been validated in the W3C Markup Validation Service and all HTML files have come back with no errors.
-- CSS Code has been validated in the W3C CSS Validation Service and all CSS code has come back with no errors (CSS level 3 + SVG)
+- The HTML code has been validated in the W3C Markup Validation Service and the HTML file haw came back with no errors.
+- CSS Code has been validated in the W3C CSS Validation Service and all CSS code has came back with no errors (CSS level 3 + SVG)
 - I have also used the lighthouse app on the page I have created to test for accessibility:
 ![Lighthouse Result](./assets/doc/thankyou.PNG "Lighthouse result")
-- JSHint
-
+- JSHint at first got 9 warning due to 'jshint eversion 6', but after putting a comment on top of the JavaScript file '/*jshint esversion: 6 */' there's no faults. 
 
 ### Page testing
-- Game rules play button turns to game board
-- Gameboard responsive to cursor
-- X/O placing after users' click
-- Sound when X/O is placed
-- Win/Tie recognition
-- Highlight the win
-- After Win/Tie does it take to scoreboard
-- Score updates after each Win
-- Play again and quit buttons – play again goes back to the game and quit takes you to thank you. 
+- Game rules 
+    - The testing I have done on game rules section is mainly for the button and the function to change its dislay to none and show another section. The button has a hover css added to it and a pointer cursor. I have tested for that by hovering over and the result was darker shade of blue to highlight the mouse being over the button. 
+
+    ![Play button](./assets/doc/playbutton.png "Play button")
+    ![Highlighted play button](./assets/doc/playbutton2.png "Highlighted play button")
+
+    - Tested the display functionality by simply pressing the 'Play!' button and the response was as expected.
+
+- Gameboard
+    - The gameboard had the most testing done to it. I tested everything as I was coding along, first tests were performed on the grid.
+        - The grid has a hover class applied to as shown in the features, when a user hovers over it it changes the cells colour to slightly darker blue, which is an indicator for users to know thats the cell thats being selecte by them.
+        - After ensuring the grid is responsive to the hover, I started to write the code that with a click of a mouse will put either a X mark or O mark depending on the users turn. I tested this by clicking every cell on the board to make sure every cells responds to the data input from JavaScript. 
+        - Following the placement of X/O marks theres a pop audio to indicate a mark has been put down. When testing to see if each cell responds to clicks and places marks the audio was tested as well as they are coded to perform their functions at the same time.
+
+    - Checking for wins and indication who won
+        - The board has 8 combination where a win can occur, I had to test that every combination responds to having either 3* X or O mark in a row and will result in a win by playing few rounds and making sure that I had 3*X in 8 combinations and the same for the O mark. All have came back successfully and declared a win when in those combinations
+        - To show the winning combinations and winning marks, the marks will return blue. This was just like testing for winning combinations to ensure the wins turn blue in every cell.
+        - The game also has a draw function, the draw function responds only to when the grid is full, this was tested by filling out the grid and the expected result was a draw section which was a success.
+
+    - Last function on the game board is who's turn it is
+        - The two mark's on the board side indicate whos turn it is by turning white depending on whether it is X's turn or O's, this was tested by switching between turns and as expected the two marks were switching colours.
+    
+- Scoreboard
+    - To get to the scoreboard section, the game has to result in a win or tie.
+    - The main functions of the scoreboard is the score keeping and the who won or if tied announcer
+        - The scores increments each time X/O wins, this was tested by playing few rounds and seeing if after each win it is adding the scores correctly. Which as expected it was.
+        ![Scores](./assets/doc/scores.PNG "Scores")
+        - The who won or if tied was tested in the same way as the score keeping, by playing few rounds to see results, and as expected all returned successfully.
+        ![Player X won](./assets/doc/playerx.PNG "Player X won")
+        ![Player O won](./assets/doc/playero.PNG "Player O won")
+        ![Tie](./assets/doc/tie.PNG "Tie")
+
+    - The scoreboard also consists of two buttons, Restart button and Quit button.
+        - The restart button takes you back to the gameboard upon clicking it, and also restarts the game so another round can be played. 
+        - Quit button takes you to the Thank you page after clicking it.
+        - Both buttons have been tested by seeing the respons after clicking, and also both have hover css applied like the 'Play!' button.
 
 ## Fixed bugs
 - Audio 
+    - 
 - Winner colour not resetting
 
 ## Unfixed bugs
