@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='shortcut icon' type='image/x-icon' href='./assets/images/favicon-32x32.png'/> 
+    <meta name="description" content="TicTacToe Game">
+    <meta name="keywords"
+        content="TicTacToe, Game, Noughts, Crosses, Noughts&Crosses, X, O, Online games, Free games, 2 Player game">
+    <link rel='shortcut icon' type='image/x-icon' href='./assets/images/favicon-32x32.png' />
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>TicTacToe</title>
@@ -11,70 +15,85 @@
 
 <body>
 
-    <header>
-        <h1 class="heading">TicTacToe</h1>
-    </header>
+    <!-- Logo -->
+        <header>
+            <h1 class="heading">TicTacToe</h1>
+        </header>
 
-    <section id="game--rules">
-        <div class="rules">
-            <h2>Game Rules</h2>
-            <p>It is really simple!<br> 
-            You are X,  the computer is O.<br> 
-            Players take turns placing their marks in empty squares.<br>
-            The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.<br>
-            When all 9 squares are full, the game end's in a draw.</p>
-            <button onClick="gameChange()">Play!</button>
-        </div>
-    </section>
+    <!-- First section - Game Rules explaining how to play-->
+        <section id="game--rules">
+            <div class="rules">
+                <h2>Game Rules</h2>
+                <p>It is really simple!<br>
+                Player 1 is X, Player 2 is O.<br>
+                Players take turns placing their marks in empty squares.<br>
+                The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.<br>
+                When all 9 squares are full, the game end's in a draw.
+                </p>
+                <button onClick="gameChange()">Play!</button>
+            </div>
+        </section>
 
-    <audio id="audio">
-        <source src="./assets/audio/ES_Suction Pop 3 - SFX Producer.mp3" type="audio/ogg">
-    </audio>
+    <!-- Click audio -->
+        <audio id="audio">
+            <source src="./assets/audio/ES_Suction Pop 3 - SFX Producer.mp3" type="audio/ogg">
+        </audio>
 
-    <section id="game--board">
-        <h2 class="bigxo" id="left">X</h2>
-        <h2 class="bigxo" id="right">O</h2> 
+    <!-- Second section - TicTacToe game -->
+        <section id="game--board">
+            <h2 class="bigxo" id="left">X</h2>
+            <h2 class="bigxo" id="right">O</h2>
 
-        <div class="container">
-                <div class="cell bigxo" id="0"></div>
-                <div class="cell bigxo" id="1"></div> 
-                <div class="cell bigxo" id="2"></div> 
-                <div class="cell bigxo" id="3"></div> 
-                <div class="cell bigxo" id="4"></div> 
-                <div class="cell bigxo" id="5"></div> 
-                <div class="cell bigxo" id="6"></div> 
-                <div class="cell bigxo" id="7"></div> 
-                <div class="cell bigxo" id="8"></div> 
-        </div>
-        
-    </section>
+            <!-- Game Board-->
+            <div class="container">
+            <div class="cell bigxo" id="0"></div>
+            <div class="cell bigxo" id="1"></div>
+            <div class="cell bigxo" id="2"></div>
+            <div class="cell bigxo" id="3"></div>
+            <div class="cell bigxo" id="4"></div>
+            <div class="cell bigxo" id="5"></div>
+            <div class="cell bigxo" id="6"></div>
+            <div class="cell bigxo" id="7"></div>
+            <div class="cell bigxo" id="8"></div>
+            </div>
+        </section>
 
-    <section id="game--score">
-        <div class="playerX-score">
-            <p>Player X Score:<br><span class="big bigxo" id="x--score">0</span></p>
-        </div>
+    <!-- Third section - Score keeping -->
+        <section id="game--score">
 
-        <img src="/assets/images/gif.gif" alt="Firework gif" width="200px" height="200px">
+        <!-- Player X Score-->
+            <div class="playerX-score">
+                <p>Player X Score:<br><span class="big bigxo" id="x--score">0</span></p>
+            </div>
 
-        <div class="playerwin big"><p id="whowon"></p></div>
-        
-        <div class="playerO-score">
-            <p>Player O Score:<br><span class="big bigxo" id="o--score">0</span></p>
-        </div>
+        <!-- Fireworks Gif-->
+            <img src="/assets/images/gif.gif" alt="Firework gif" width="200px" height="200px">
 
-        <div class="score--buttons">
-            <button onClick="gameRestart()"> Restart </button>
-            <button onClick="quitButton()"> Quit </button>
-        </div>
-    </section>
+        <!-- Decalares who won-->
+            <div class="playerwin big">
+                <p id="whowon"></p>
+            </div>
 
-    <section id="thankyou">
-        <div class="big bigxo">
-            <p>Thank You for playing!</p>
-        </div>
-    </section>
+        <!-- Player O Score-->
+            <div class="playerO-score">
+                <p>Player O Score:<br><span class="big bigxo" id="o--score">0</span></p>
+            </div>
 
-    <script src="./assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/3ef777943d.js" crossorigin="anonymous"></script>
+            <div class="score--buttons">
+                <button onClick="gameRestart()"> Restart </button>
+                <button onClick="quitButton()"> Quit </button>
+            </div>
+        </section>
+
+    <!-- Fourth Section - Thank you for playing-->
+        <section id="thankyou">
+            <div class="big bigxo">
+                <p>Thank You for playing!</p>
+            </div>
+        </section>
+
+    <!-- JavaScript -->
+        <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
