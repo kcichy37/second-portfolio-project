@@ -27,7 +27,8 @@ const O = 'O';
 const X = 'X';
 let currentPlayer = X;
 let cellsIndex = Array(9).fill(null);
-let turn = currentPlayer;
+let movesLeft = 9
+
 
 let winnercolor = getComputedStyle(document.body).getPropertyValue('--winningcolor')
 let resetcolor = getComputedStyle(document.body).getPropertyValue('--resetcolor')
@@ -42,6 +43,7 @@ function cellClicked(e){
     if(!cellsIndex[id]){
         cellsIndex[id] = currentPlayer
         e.target.innerText = currentPlayer;
+        movesLeft--
 
         if(playerWon() !==false){
             let winning = playerWon();
@@ -59,7 +61,11 @@ function cellClicked(e){
             }else{
                 oMarkScore()
             }
-        } 
+        }else if(movesLeft == 0){
+            setTimeout(() => {document.getElementById('game--board').style.display = 'none';
+            document.getElementById('game--score').style.display = "block"; }, 2500);
+            document.getElementById('whowon').innerText = `It's A Tie`
+        }
           
         let left = document.getElementById('left');
         let right = document.getElementById('right');
@@ -73,7 +79,7 @@ function cellClicked(e){
             right.style.color = '#fcd03e'
         }
     }
-    
+
     const pop = document.getElementById("audio"); 
     pop.play(); 
 
@@ -101,6 +107,7 @@ function playerWon(){
     return false;
 }
 
+
 function xMarkScore(){
     let xscore = parseInt(document.getElementById("x--score").innerText);
     document.getElementById("x--score").innerText = ++xscore;
@@ -114,9 +121,10 @@ function oMarkScore(){
 function gameRestart(){
     const gameBoardSection = document.getElementById('game--board');
     const gameScore = document.getElementById('game--score'); 
+    movesLeft = 9;
     clearBoard()
 
-    function clearBoard(e) {
+    function clearBoard() {
         document.getElementById("0").innerHTML = ''
         document.getElementById("1").innerHTML = ''
         document.getElementById("2").innerHTML = ''
@@ -149,9 +157,4 @@ function gameRestart(){
 }
 
 startGame();
-
-
-
-
-
 
