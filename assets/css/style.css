@@ -242,14 +242,26 @@ img{
     display: none;
 }
 
-/* Meida Queries */
-@media screen and (max-width: 1200px) {
-    #game--score{
-        width: 90%;
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+    .playerwin{
+        font-size: 400%;
     }
 
-    .playerwin{
-        margin-top: 0;
-        margin-bottom: 0;
+    .playerO-score,
+    .playerX-score{
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .cell{
+        font-size: 600%;
+        height: 150px;
+    }
+
+    .container{
+        grid-template-columns: 35% 35% 35%;
+        position: inherit;
     }
 }
