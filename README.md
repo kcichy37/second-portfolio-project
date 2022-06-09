@@ -72,8 +72,9 @@ Each section contains the games title 'TicTacToe' which is a yellow 'Sriracha' f
     - Multiplayer games against other people, could be played across all platforms with internet access.
 
 ### Wireframes/Planning
-
-## Testing
+### Initial idea
+- My [Initial Idea](/assets/doc/initialidea.PNG) was to have everything on one page, and also include computer player, however, after a discussion with my mentor we decided it was best idea to have different sections rather than everything crumped on one page and not to involve computer, but rather focus on getting familiar with JavaScript by having different sections and focusing on plaver v player.
+   
 ### Code Validation 
 - The HTML code has been validated in the W3C Markup Validation Service and the HTML file haw came back with no errors.
 - CSS Code has been validated in the W3C CSS Validation Service and all CSS code has came back with no errors (CSS level 3 + SVG)
@@ -121,11 +122,12 @@ Each section contains the games title 'TicTacToe' which is a yellow 'Sriracha' f
 
 ## Fixed bugs
 - Audio 
-    - 
+    - The audio had a little silent moment after the pop noise, therefore if another cell was clicked another pop noise would play. This was fixed by trimming the audio.
 - Winner colour not resetting
+    - After a winner was declared and it change the marks colour to blue, resetting the board didn't change the colour back to yellow, therefore, I wrote a code that idividually changes each cell back yellow.
 
 ## Unfixed bugs
-- N/A
+- The audio problem still proceeds if clicked too quick.
 
 ## Supported screens and Browsers
 - 
@@ -138,4 +140,20 @@ Each section contains the games title 'TicTacToe' which is a yellow 'Sriracha' f
     - Once saved, the page will provide a link to the completed website.
 
 ### Gitpod
-- 
+- Site is deployed on Github by:
+    1. Downloading Github extension for your browser so the code opens in the browser.
+    2. Going to the sites dedicated repository.
+    3. above the commits, theres a green button with 'Gitpod'
+    4. By clicking that, Gitpod will open it's code creator site
+    5. On Github we go to the terminal and type in 'python3 -m http.server' 
+    6. A pop up will open, press preview and the website will deploy. 
+
+## Credits
+- [w3schools](https://www.w3schools.com/) was used for extra help with code.
+- [Siphiwo Julayi](https://www.youtube.com/c/SiphiwoJulayi) videos helped with building the game board. 
+- [Adam Nagy](https://dev.to/javascriptacademy/create-a-simple-tic-tac-toe-game-using-html-css-javascript-i4k) Read the blog for general knowledge on how one would build a TicTacToe game
+- [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified) video helped with building the game board.
+
+## Media
+- Images used were used from Google images for educational purposes only, the media used was the background and the firework gif
+- Audio for click was bought from https://www.epidemicsound.com/music/featured/
