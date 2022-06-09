@@ -198,13 +198,6 @@ Code gets rid of the side borders on the game board */
     margin-bottom: 0;
 }
 
-
-img{
-    margin-top: 5%;
-    width: 40%;
-    height: 40%;
-}
-
 .score--buttons{
     position: relative;
     top: 35%;
@@ -264,4 +257,96 @@ img{
         grid-template-columns: 35% 35% 35%;
         position: inherit;
     }
+}
+
+@media screen and (max-width: 850px){
+
+    #left{
+        margin-left: 5%;
+    }
+
+    #right{
+        margin-right: 5%;
+        margin-left: 10%;
+    }
+
+    .container{
+        grid-template-columns: 40% 40% 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .playerwin{
+        font-size: 300%;
+    }
+
+    .playerO-score,
+    .playerX-score{
+        font-size: 125%;
+    }
+
+    #game--score,
+    #game--board{
+        width: 90%;
+    }
+
+    .rules p{
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .heading{
+        font-size: 500%;
+    }
+
+    .bigxo{
+        font-size: 500%;
+    }
+
+    #game--score,
+    #game--board{
+        width: 95%;
+    }
+
+    #left,
+    #right{
+        margin-top: 45%;
+    }
+
+    #left{
+        margin-left: 2%;
+    }
+
+    #right{
+        margin-right: 2%;
+    }
+
+    .playerO-score, .playerX-score {
+        font-size: 110%;
+      }
+}
+
+@media screen and (max-width: 400px){
+    .heading{
+        font-size: 400%;
+    }
+
+    .rules h2{
+        font-size: 200%;
+    }
+
+    .rules p{
+        font-size: 125%;
+    }
+
+    .cell{
+        font-size: 400%;
+        height: 125px;
+    }
+
+    .playerO-score, .playerX-score {
+        font-size: 100%;
+      }
 }
