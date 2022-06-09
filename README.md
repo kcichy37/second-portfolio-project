@@ -30,39 +30,42 @@ The theme of the site is blue, yellow and white/black, this theme is based on th
 <img src="./assets/images/background.webp" alt="Background" width="75%" height="25%"/>
 
 Each section contains the game's title 'TicTacToe' which is in a yellow 'Sriracha' font. The whole body is set to that font.
-![Title](./assets/doc/title.PNG "Title")
+
+![Title](./doc/title.PNG "Title")
 
 ### 1. Game rules 
 - The features in this section include a how to play the game information as well as at the bottom of the sentence there's a 'Play!' button that is coded to hide the rules and show the game board section.
-![Game Rules](./assets/doc/gamerules.PNG "Game Rules")
+![Game Rules](./doc/gamerules.PNG "Game Rules")
 
-### 2.Game board
+### 2. Game board
 - The game has a simple 3x3 board with a little tint in each cell so that the board stands out more from the background
-![Game Board](./assets/doc/board.PNG "Game Board")
+
+![Game Board](./doc/board.PNG "Game Board")
 - Game board has a hover CSS style applied to it so that when a user hovers over it, the tint changes to a slightly more blue color highlighting the selected cell as well as the cursor changes to a pointer cursor.
-![Blue hover tint](./assets/doc/bluetint.png "Blue hover tint")
+![Blue hover tint](./doc/bluetint.png "Blue hover tint")
 
 - Once the game board cells get clicked the marks will appear depending on who's turn it is. When the user clicks there is a pop sound to indicate that a click has happened.
-![X/O Placing](./assets/doc/xo.PNG "X/O placing")
+![X/O Placing](./doc/xo.PNG "X/O placing")
 
 <audio controls><source src="./assets/audio/clickaudio.mp3" type="audio/ogg"></audio>
 
 - The game board also has two marks on the sides of the board which indicate who's turn it is. They indicate this by swapping color to white depending on whose turn it is.
-![Turn indicators](./assets/doc/turntaking.PNG "Turn indicators")
+![Turn indicators](./doc/turntaking.PNG "Turn indicators")
 
 - Once the winner of a round is declared by the board the marks turn blue depending on which mark has won. 
-![Winner indicator](./assets/doc/winner.png "Winner indicator")
+![Winner indicator](./doc/winner.png "Winner indicator")
 
 - Once a win or a tie has been settled, the game board section will hide after a little delay to reveal the scoreboard and announce the winner.
 
 ### 3. Scoreboard
 - The scoreboard consists of Player X and Player O score which goes up depending on how many round each won. with the win there's also an announcement that shows who won or if its a tie. 
-![ScoreboardX](./assets/doc/scoreboard.PNG "ScoreboardX")
-![ScoreboardO](./assets/doc/scoreboardo.PNG "ScoreboardO")
-![Tie](./assets/doc/tie.PNG "Tie")
+![ScoreboardX](./doc/scoreboard.PNG "ScoreboardX")
+![ScoreboardO](./doc/scoreboardo.PNG "ScoreboardO")
+![Tie](./doc/tie.PNG "Tie")
 
 - At the bottom the scoreboard there's two buttons one to reset the game and start a new round and one to quit the game which will take you to a thank you section.
-![Thank You](./assets/doc/thankyou.PNG "Thank You")
+
+![Thank You](./doc/thankyou.PNG "Thank You")
 
 ## Future Feature
 - The future features I would like to add to the game are: 
@@ -72,21 +75,21 @@ Each section contains the game's title 'TicTacToe' which is in a yellow 'Srirach
 
 ### Wireframes/Planning
 ### Initial idea
-- My [Initial Idea](/assets/doc/initialidea.PNG) was to have everything on one page, and also include a computer player, however, after a discussion with my mentor we decided it was the best idea to have different sections rather than everything crumped on one page and not to involve a computer, but rather focus on getting familiar with JavaScript by having different sections and focusing on player v player.
+- My [Initial Idea](./doc/initialidea.PNG) was to have everything on one page, and also include a computer player, however, after a discussion with my mentor we decided it was the best idea to have different sections rather than everything crumped on one page and not to involve a computer, but rather focus on getting familiar with JavaScript by having different sections and focusing on player v player.
    
 ### Code Validation 
 - The HTML code has been validated in the W3C Markup Validation Service and the HTML file haw came back with no errors.
 - CSS Code has been validated in the W3C CSS Validation Service and all CSS code has come back with no errors (CSS level 3 + SVG)
 - I have also used the lighthouse app on the page I have created to test for accessibility:
-![Lighthouse Result](./assets/doc/thankyou.PNG "Lighthouse result")
+![Lighthouse Result](./doc/section1.PNG "Lighthouse result")
 - JSHint at first got 9 warnings due to 'jshint eversion 6', but after putting a comment on top of the JavaScript file '/*jshint esversion: 6 */' there are no faults. 
 
 ### Page testing
 - Game rules 
     - The testing I have done on the game rules section is mainly for the button and the function to change its display to none and show another section. The button has a hover CSS added to it and a pointer cursor. I have tested for that by hovering over and the result was a darker shade of blue to highlight the mouse being over the button. 
 
-    ![Play button](./assets/doc/playbutton.png "Play button")
-    ![Highlighted play button](./assets/doc/playbutton2.png "Highlighted play button")
+    ![Play button](./doc/playbutton.png "Play button")
+    ![Highlighted play button](./doc/playbutton2.png "Highlighted play button")
 
     - Tested the display functionality by simply pressing the 'Play!' button and the response was as expected.
 
@@ -108,11 +111,11 @@ Each section contains the game's title 'TicTacToe' which is in a yellow 'Srirach
     - To get to the scoreboard section, the game has to result in a win or tie.
     - The main functions of the scoreboard is the scorekeeping and the who won or if tied announcements
         - The scores increments each time X/O wins, this was tested by playing a few rounds and seeing if after each win it is adding the scores correctly. Which as expected it was.
-        ![Scores](./assets/doc/scores.PNG "Scores")
+        ![Scores](./doc/scores.PNG "Scores")
         - The who won or if tied was tested in the same way as the scorekeeping, by playing a few rounds to see results, and as expected all returned successfully.
-        ![Player X won](./assets/doc/playerx.PNG "Player X won")
-        ![Player O won](./assets/doc/playero.PNG "Player O won")
-        ![Tie](./assets/doc/tie.PNG "Tie")
+        ![Player X won](./doc/playerx.PNG "Player X won")
+        ![Player O won](./doc/playero.PNG "Player O won")
+        ![Tie](./doc/tie.PNG "Tie")
 
     -  The scoreboard also consists of two buttons, the Restart button, and the Quit button.
         - The restart button takes you back to the gameboard upon clicking it and also restarts the game so another round can be played. 
@@ -131,7 +134,7 @@ Each section contains the game's title 'TicTacToe' which is in a yellow 'Srirach
 ## Supported screens and Browsers
 - I confirmed the website is responsive by using the dev toolkit on Mozilla firefox, as well as, opening the website on iPhones 12/13 Pro Max and Samsung Galaxy S10 +. Looks good and works properly on most standard screen sizes.
 -Tested the site on Mozilla Firefox, Chrome, and Safari (iOS). No problems relating to design or the site itself on any of these sites.
-![Responsiveness](./assets/doc/responsive.png "Responsiveness")
+![Responsiveness](./doc/responsive.png "Responsiveness")
 
 ## Deployment 
 ### Github
